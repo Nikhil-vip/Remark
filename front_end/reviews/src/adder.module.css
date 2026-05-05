@@ -1,0 +1,23 @@
+.top_bar {
+  height: 9vh;
+  width: 100%;
+  background-color: rgb(0, 255, 102);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end
+}
+
+button {
+  flex-shrink: 0;
+  height: 50px;
+  width: 100px;
+  margin-right: 10px;
+  border-radius: 10px 10px;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(5px);
+}
