@@ -1,3 +1,35 @@
 body {
   background-color: aquamarine;
 }
+
+.message {
+  position: relative;
+  /* CRITICAL: This allows the 'ear' to stick to the box */
+  width: 80%;
+  background-color: rgb(174, 174, 177);
+  padding: 10px;
+  border-radius: 10px;
+  /* Rounded corners like modern chat */
+  margin-left: 20px;
+  /* Space for the tail to sit */
+  color: black;
+  font-family: sans-serif;
+}
+
+/* The "Ear" (Tail) */
+.message::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  /* Aligns it to the top */
+  left: -4px;
+  /* Pulls it outside the box to the left */
+
+  /* The Triangle Magic */
+  width: 0;
+  height: 0;
+  border-top: 10px solid rgb(174, 174, 177);
+  /* Same color as box */
+  border-left: 10px solid transparent;
+  /* Makes it a triangle */
+}
