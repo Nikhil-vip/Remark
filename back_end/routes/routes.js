@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router(); // Fix 1: 'Router' must be capitalized and called as a function ()
-const Messages = require('./Models/message.js');
+const Messages = require('./modles/message.js');
 
 router.get('/dash', async (req, res) => {
   try {
