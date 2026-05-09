@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router(); // Fix 1: 'Router' must be capitalized and called as a function ()
-const Messages = require('./modles/message.js');
+const messages = require('../modles/message.js');
 
 router.get('/dash', async (req, res) => {
   try {
-    const old_messages = await Messages.find({});
+    const old_messages = await messages.find({});
     res.status(200).send(old_messages);
   } catch (err) {
     console.log("There was an error:", err);
@@ -12,7 +12,7 @@ router.get('/dash', async (req, res) => {
   }
 });
 
-router.post('/add', async (req, res) => {
+router.post('/api/message', async (req, res) => {
   try {
     const { name, message } = req.body;
 

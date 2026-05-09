@@ -4,4 +4,4 @@ const message_schemna = new mongoose.Schema({
   message: { type: String }
 }
 );
-module.exports = mongoose.modle('Message', message_schemna);
+module.exports = mongoose.model('message', message_schemna);
